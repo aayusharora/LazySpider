@@ -6,7 +6,8 @@ from selenium.webdriver.common.keys import Keys
 import random
 import urllib
 
-url = "https://www.pexels.com/search/bokeh" 
+keyword = 'dog'
+url = "https://www.pexels.com/search/" + keyword 
 def download_image(image_url):
     with open('./_images/'+ str(uuid.uuid1()) + '.jpeg', 'wb') as handle:
             response = requests.get(image_url, stream=True)
